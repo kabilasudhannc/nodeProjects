@@ -1,0 +1,63 @@
+<%- include('base.ejs') %>
+<body>
+    <div class="container">
+        <div class="option-container item">
+            <form action="/" method="post" class="form-container">
+                <div>
+                    <p class="big-title">Category:</p>
+                    <label for="any">
+                        <input type="radio" name="primary" id="any" value="any" class="primary" checked> Any
+                    </label> <br>
+                    <label for="custom">
+                        <input type="radio" name="primary" id="custom" value="custom" class="primary"> Custom:
+                    </label>
+                    <span class="secondary">
+                        <input type="checkbox" name="secondary" value="Programming" id="programming" disabled><label for="programming">Programming</label>
+                        <input type="checkbox" name="secondary" value="Misc" id="misc" disabled><label for="misc">Misc</label>
+                        <input type="checkbox" name="secondary" value="Dark" id="dark" disabled><label for="dark">Dark</label>
+                        <input type="checkbox" name="secondary" value="Pun" id="pun" disabled><label for="pun">Pun</label>
+                        <input type="checkbox" name="secondary" value="Spooky" id="spooky" disabled><label for="spooky">Spooky</label>
+                        <input type="checkbox" name="secondary" value="Christmas" id="christmas" disabled><label for="christmas">Christmas</label>
+                    </span>
+                </div>
+
+                <div>
+                    <span class="big-title">Flag to blacklist: (optional)</span>
+                    <input type="checkbox" name="flags" value="nfsw" id="nfsw"><label for="nfsw">Nfsw</label>
+                    <input type="checkbox" name="flags" value="religious" id="religious"><label for="religious">Religious</label>
+                    <input type="checkbox" name="flags" value="political" id="political"><label for="political">Political</label>
+                    <input type="checkbox" name="flags" value="racist" id="racist"><label for="racist">Racist</label>
+                    <input type="checkbox" name="flags" value="sexist" id="sexist"><label for="sexist">Sexist</label>
+                    <input type="checkbox" name="flags" value="explicit" id="explicit"><label for="explicit">Explicit</label>
+                </div>
+
+                <div>
+                    <span class="big-title">Joke Type:</span>
+                    <input type="checkbox" name="type" value="single" id="single" checked><label for="single">single</label>
+                    <input type="checkbox" name="type" value="twopart" id="twopart"><label for="twopart">twopart</label>
+                </div>
+
+                <div>
+                    <span class="big-title">Search String (optional):</span>
+                    <input type="text" name="searchString" id="searchstring">
+                </div>
+                <button type="submit">Get Joke</button>
+            </form>
+        </div>
+
+        <div class="result item">
+            <% if(locals.data) { %>
+                <% if (!data.error) { %>
+                    <% if (data.type === 'twopart') { %>
+                        <p><span class="big-title">Setup:</span> <%= data.setup %></p>
+                        <p><span class="big-title">Delivery:</span> <%= data.delivery %></p>
+                    <% } else { %>
+                        <p><span class="big-title">Joke:</span> <%= data.joke %></p>
+                    <% } %>
+                <% } else { %>
+                    <p><%= data.message %></p>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+</body>

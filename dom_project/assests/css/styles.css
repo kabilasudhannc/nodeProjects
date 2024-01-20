@@ -1,0 +1,38 @@
+body{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    color: #435334;
+    text-shadow: 3px 3px #CEDEBD;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #FAF1E4;
+}
+
+.message {
+    font-size: 4rem;
+}
+
+.dice{
+    display: flex;
+    gap: 10em;
+    text-align: center;
+}
+
+.dice-1 img, .dice-2 img{
+    height: 200px;
+    width: 200px;
+}
+
+.footer {
+    justify-self: flex-end
+}

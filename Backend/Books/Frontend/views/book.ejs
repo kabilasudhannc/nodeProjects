@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs') %>
+<div class="book-container">
+    <% if (locals.data) { %>
+        <img src="<%= data.bookcover %>" alt="book cover">
+    <% } else { %>
+        <%= error  %>
+    <% } %>
+</div>
+<%- include('partials/footer.ejs') %>

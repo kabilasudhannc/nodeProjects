@@ -1,0 +1,12 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Add Book</h1>
+<form action="/add" method="post" class="bookForm">
+    <label for="isbnNumber"><span>ISBN Number:</span> <input type="text" id="isbnNumber" name="isbnNumber" required></label>
+    <label for="bookHeader"><span>Book Title:</span> <input type="text" id="bookHeader" name="bookTitle" required></label>
+    <label for="bookDescription"><span>Description:</span> <textarea rows="10" id="bookDescription" name="bookDescription" required></textarea></label>
+    <label for="bookRating"><span>Rating:</span> <input type="number" min="1" max="5" id="bookRating" name="bookRating" required></label>
+    <label for="bookAuthor"><span>Author:</span> <input type="text" id="bookAuthor" name="bookAuthor" required></label>
+    <button class="button">Submit</button>
+</form>
+<%- include('partials/footer.ejs') %>
