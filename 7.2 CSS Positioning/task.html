@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Image</title>
+    <style>
+        .profile-container {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            background-color: red;
+            border-radius: 50%;
+            top: 100px;
+            transition: transform 0.3s ease;
+            transform: scale(0.7);
+        }
+
+        .profile {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .edit {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.2s;
+        }
+
+        .profile-container:hover .edit {
+            opacity: 1;
+        }
+
+        .profile-container:hover {
+            transform: scale(1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMqcbT78f1JyJctwdZ05x0lxUzpZ29btAfOA&s" alt="profile" class="profile">
+        <p class="edit">Edit</p>
+    </div>
+</body>
+</html>

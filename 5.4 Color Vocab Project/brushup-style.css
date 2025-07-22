@@ -1,0 +1,28 @@
+.rojo {
+    color: red;
+}
+
+.azul {
+    color: blue;
+}
+
+.anaranjado {
+    color: orange;
+}
+
+.rojo.container {
+    background-color: red;
+}
+
+.azul.container {
+    background-color: blue;
+}
+
+.anaranjado.container {
+    background-color: orange;
+}
+
+.container {
+    height: 200px;
+    width: 200px;
+}

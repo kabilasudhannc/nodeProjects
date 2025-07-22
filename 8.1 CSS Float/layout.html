@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        div, footer {
+            margin: 0.2rem;
+        }
+
+        .header {
+            border: 5px solid black;
+            text-align: center;
+        }
+
+        .sidebar, .main-content {
+            display: inline-block;
+            border: 5px solid black;
+            height: 600px;
+            text-align: center;
+        }
+
+        .sidebar {
+            float: left;
+            width: 25%;
+        }
+
+        .main-content {
+            float: right;
+            width: 70%;
+        }
+
+        .footer {
+            clear: both;
+            border: 5px solid black;
+            text-align: center;
+        }
+
+        .main-content > h1, .sidebar > h1 {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+    <div class="sidebar">
+        <h1>Sidebar</h1>
+    </div>
+    <div class="main-content">
+        <h1>Main Content</h1>
+    </div>
+    <footer class="footer">
+        <h1>Footer</h1>
+    </footer>
+</body>
+</html>

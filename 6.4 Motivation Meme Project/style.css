@@ -3,19 +3,21 @@ body {
     color: white;
 }
 
-.container{
+img {
+    border: 5px solid white;
+}
+
+div {
     text-align: center;
     width: 50%;
     margin-left: 25%;
+}
+
+img {
+    width: 100%;
     margin-top: 50px;
 }
 
-.main-text {
-    font-family: 'Libre Baskerville', serif;
+h1 {
     text-transform: uppercase;
-}
-
-.image {
-    width: 100%;
-    border: 5px solid white;
 }
